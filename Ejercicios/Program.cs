@@ -11,7 +11,7 @@ namespace Operadores
             //ObjEjercicio.PalabraLarga();
 
             Ciclos objCiclos = new Ciclos();
-            objCiclos.TiempoDeViaje();
+            objCiclos.IntervaloNumeros();
 
         }
     }     

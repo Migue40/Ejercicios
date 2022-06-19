@@ -386,14 +386,49 @@ namespace Operadores
             
         }
 
+        public void IntervaloNumeros()
+        {
+            Console.WriteLine("Escribe el Límite inferior de este intervalo");
+            int LimiteInferior= Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Escribe el Límite Superior de este intervalo");
+            int LimiteSuperior = Convert.ToInt32(Console.ReadLine());
+            int Const=0;
+            if (LimiteInferior == LimiteSuperior)
+            {
+                Console.WriteLine("Los números introducidos son iguales");
+            }
+            else
+            {
+                while (LimiteInferior > LimiteSuperior)
+                {
+                    Const = Const + 1;
+                    Console.WriteLine(Const + " Números fuera del intérvalo.");
+                    Console.WriteLine("Escribe el Límite Superior de este intervalo");
+                    LimiteSuperior = Convert.ToInt32(Console.ReadLine());
 
+                    if (LimiteInferior == LimiteSuperior)
+                    {
+                        Console.WriteLine("Los números introducidos son iguales");
+                    }
+
+                    if (LimiteSuperior == 0)
+                    {
+                        break;
+                    }
+                }
+                if (LimiteInferior < LimiteSuperior)
+                {
+                    for (int i = LimiteInferior; i <= LimiteSuperior; i++)
+                    {
+                        Const = Const + i;
+
+                    }
+                    Console.WriteLine("Suma" + Const);
+                }
+            }
             
-            
-            
 
-
-        
-
-
+        }
+         
     }
 }
